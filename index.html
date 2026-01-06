@@ -1,0 +1,340 @@
+<html>
+    <head>
+        <title>Landing page</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background: #1f3446;
+                padding: 1.5rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .Landing {
+                background: white;
+                border-radius: 16px;
+                padding: 1.6rem 2.2rem;
+                margin: auto;
+                max-width: 760px;
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .logo img {
+                width: 26px;
+            }
+            .menu {
+                display: flex;
+                gap: 1.4rem;
+                font-size: 15px;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: black;
+            }
+            .nav-actions{
+                display: flex;
+                gap: 0.7rem;
+
+            }
+
+            .signup {
+                background: black;
+                color: white;
+                border-radius: 18px;
+                padding: 0.35rem 1rem;
+                border: none;
+                font-size: 13px;
+            }
+            .login{
+                background: none;
+                border: none;
+                color: #444;
+                font-size:13px;
+            }
+            .top-underline {
+                margin-top: 1rem;
+                height: 1px;
+                background-color: rgb(233, 195, 146);
+            }
+
+            .hero {
+                display: grid;
+                grid-template-columns: 1.15fr 1fr;
+                gap: 2.2rem;
+                margin-top: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 3.2rem;
+                line-height: 1.05;
+                font-weight: 500;
+                font-style: italic;
+            }
+            .hero-text h1 span {
+                color: #7a3e2e;
+                font-style: normal;
+                
+            }
+            .hero-text p {
+                margin: 1.2rem;
+                color: #666;
+                max-width: 380px;
+                font-size: 14px;
+            }
+
+            .cards{
+               display:  flex;
+               gap: 0.8rem;
+            }
+            .card {
+                background: white;
+                border-radius: 14px;
+                padding: 0.8rem;
+                width: 105px;
+                text-align: center;
+                box-shadow: 0px  6px 16px rgb(201, 185, 185);
+            }
+            .card img {
+                width: 44px;
+                margin-bottom: 0.4rem;
+            }
+            .card h4 {
+                font-size: 13px;
+            }
+            .card p {
+                font-size: 10px;
+                color: #777;
+            }
+            .card span {
+                font-size: 12px;
+                font-weight:  bold;
+                background-color: #c7d1da;
+                border-radius: 5px;
+                gap: 1rem;
+                width: 30px;
+            }
+            .hero-image  {
+                position: relative;
+            }
+            .hero-image .hand {
+                width: 100%;
+                transform: translate(30px);
+            }
+            .hero-image .stone {
+                position: absolute;
+                top: 8px;
+                left: 1%;
+                width: 160px;
+            }
+            .hero-image .tea {
+                position: absolute;
+                left: -65px;
+                top: 44%;
+                align-items: baseline;
+                gap: 0.6rem;
+                background: blue;
+                color: white;
+                padding: 0.5rem 1.4rem;
+                border-radius: 999px;
+                border: none;
+                font-size: 13px;
+                transform: translate(40px);
+
+            }
+            .hero-image .tea img {
+                width: 13px;
+            }
+            .barcode {
+                position: absolute;
+                bottom: -17px;
+                right: 0;
+            }
+            .barcode img {
+                width: 220px;
+            }
+            .footer-last {
+                margin-top: 1.2rem;
+                padding-top: 1.2rem;
+                border-top: 1px solid  rgb(238, 184, 193);
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                color: black;
+            }
+            .footer-last span::before {
+                margin-right: 5px;
+                color: #c9a56a;
+            }
+            .footer-last img {
+                width: 19px;
+                
+            }
+
+            @media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+    font-size: 13px;  }
+    .hero-image .stone {
+    width: 120px;
+    left: 0;
+    top: 20px;
+  }
+
+  .hero-image .cta {
+    left: 0;
+    top: auto;
+    bottom: -30px;
+    transform: translateX(0);
+  }
+
+  .scanner img {
+    width: 150px;
+  }  .cards {
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .wrapper {
+    padding: 1rem 1.2rem;
+  }   .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  .cards {
+    gap: 0.5rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .hero-image .stone {
+    width: 100px;  
+    }
+
+  .scanner img {
+    width: 120px;
+  }
+}
+</style>
+                  
+</head>
+<body>
+                                   <!--header-->
+    <div class="Landing">
+        <header class="nav">
+            <div class="logo">
+                <img src="Resources/Resources/star.png">
+                </div>
+
+                <nav class="menu">
+                    <a href="#"> Home</a>
+                      <a href="#"> Marketplace</a>
+                        <a href="#"> Artist</a>
+                          <a href="#"> Community</a>
+                          </nav>
+
+                       <div class="nav-actions">
+                        <button class="signup">Sign up </button>
+                        <button class="login">Login </button>
+                        </div>
+                        
+  </header>
+
+  <div class="top-underline"></div>
+
+
+  <!-- Middle-->
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1> Unlock <br>
+            <span> The Digital </span><br>
+           <span>  Renaissance </span>
+             </h1>
+
+             <p>  Join the revolution , embrance the digital revolution , and
+                become part the ever-evolving NFT ecosystem.
+             </p>
+
+             <div class="cards">
+                <div class="card">
+                    <img src="Resources/Resources/beer.png">
+                    <h4>Bear</h4>
+                    <p>by Andrew Gart </p>
+                    <span>$40</span>
+                    </div>
+
+                    <div class="card">
+                    <img src="Resources/Resources/lion.png">
+                    <h4>Lion</h4>
+                    <p>by Jen Stark </p>
+                    <span>$80</span>
+                    </div>
+
+                    <div class="card">
+                    <img src="Resources/Resources/Cat.png">
+                    <h4>Cats</h4>
+                    <p>by Casey reas</p>
+                    <span>$120</span>
+                    </div>
+ </div>
+                </div>
+
+                        <div class="hero-image"> 
+                            <img src="Resources/Resources/hand.png"  class="hand">
+                             <img src="Resources/Resources/stone.png"  class="stone">
+
+                             <button class="tea">
+                                Start 
+                                <img src="Resources/Resources/arrow.png">
+                             </button>
+
+                             <div class="barcode">
+                                <img src="Resources/Resources/Barcode.png">
+                        </div>
+                        </div>
+                        </section>
+
+
+                        <!--Footer-->
+                        <footer class="footer-last">
+                            <span > <img src="Resources/Resources/star.png">Join the Revolution </span>
+                             <span >  <img src="Resources/Resources/star.png">Future is Here </span>
+                              <span > <img src="Resources/Resources/star.png"> NFT World </span>
+                               <span > <img src="Resources/Resources/star.png"> Rule the Game</span>
+                                <span >  <img src="Resources/Resources/star.png">we Are NFT </span>
+                                </footer>
+                            </div>
+    </body>
+
+    </html>
